@@ -1,0 +1,11 @@
+{
+  "name": "router",
+  "version": "1.0.0-beta",
+  "homepage": "http://bouncy.monkd.us",
+  "author": "Jonathan Miller <jonathan.michael.miller@gmail.com>",
+  "main": "router.js",
+  "dependencies": {
+    "bouncy": "*",
+    "redis": "*"
+  }
+}
