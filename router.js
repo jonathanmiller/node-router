@@ -20,12 +20,25 @@ var server = bouncy(function (req, res, bounce) {
       return;
     }
 
+    console.log( 'Upgrade header: %s', req.headers['upgrade'] );
+    console.log( 'Connection header: %s', req.headers['connection'] );
+
+    var upgrade = req.headers['upgrade'];
+    var connection = req.headers['connection']
+
+    var headers = {
+      'x-token': token,
+      'x-articulated-route': route,
+      'x-proxy': 'interesting-times-club'
+    };  
+
+    if ( upgrade !== void 0 ) {
+      headers.upgrade = upgrade;
+      headers.connection = connection;
+    }
+
     var opts = {
-      headers: {
-        'x-token': token,
-        'x-articulated-route': route,
-        'x-proxy': 'interesting-times-club'
-      }
+      headers: headers
     };
 
     bounce( route, opts );
