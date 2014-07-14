@@ -45,4 +45,8 @@ var server = bouncy(function (req, res, bounce) {
   });
 });
 
-server.listen( 23456 );
+var port = 23456;
+
+server.listen( port, function() {
+  console.log( 'Router listening on port ' + port );
+});
