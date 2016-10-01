@@ -5,8 +5,8 @@
   "author": "Jonathan Miller <jonathan.michael.miller@gmail.com>",
   "main": "router.js",
   "dependencies": {
-    "bouncy": "*",
-    "redis": "*",
-    "winston": "*"
+    "bouncy": "3.2.2",
+    "redis": "2.6.2",
+    "winston": "*2.2.0"
   }
 }
